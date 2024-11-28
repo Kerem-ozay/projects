@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <style>/* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #104600;
+            color: #ffffff;
+        }
+        
+        header {
+            background: #00318d;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #4CAF50;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        
+        .question {
+            margin-bottom: 15px;
+        }
+        
+        #result {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinir Sistemi Bilgilendirme ve Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sinir Sistemi Bilgilendirme ve Test</h1>
+    </header>
+    <main>
+        <section id="bilgi">
+            <h2>Merkezi Sinir Sistemi (MSS)</h2>
+            <p>
+                Merkezi sinir sistemi (MSS), beynin ve omuriliğin oluşturduğu sistemdir. 
+                MSS, tüm bilinçli ve bilinçsiz vücut aktivitelerini kontrol eder. Beyin, bilgiyi işler ve davranışları yönetirken, 
+                omurilik reflekslerin ve sinir sinyallerinin taşınmasında rol oynar.
+            </p>
+            <img src="https://bilimgenc.tubitak.gov.tr/sites/default/files/inline-images/beyin_cizim_4.jpg" alt="Merkezi Sinir Sistemi Görseli">
+            
+            <h3>Beyin Bölümleri</h3>
+            <p>
+                Beyin dört ana bölgeden oluşur:
+                <ul>
+                    <li><strong>Frontal Lob:</strong> Düşünce, planlama ve problem çözme.</li>
+                    <li><strong>Parietal Lob:</strong> Dokunma algısı ve mekansal farkındalık.</li>
+                    <li><strong>Temporal Lob:</strong> İşitme, hafıza ve dil işlevleri.</li>
+                    <li><strong>Oksipital Lob:</strong> Görsel bilgiyi işleme.</li>
+                </ul>
+            </p>
+            <img src="https://doktorfizik.com/wp-content/uploads/2019/11/serebrum.png" alt="Beyin Bölgeleri Görseli">
+
+            <h3>Omurilik</h3>
+            <p>
+                Omurilik, beyinle vücut arasında bilgi taşır ve reflekslerin kontrolünde yer alır. 
+                Omurilik, vücuttaki tüm istemli ve istemsiz hareketlerin doğru bir şekilde gerçekleşmesini sağlar.
+            </p>
+            <img src="https://i0.wp.com/www.biyolojidersim.com/wp-content/uploads/2018/02/sinir_sistemi_25_omurilik_yapisi_spinal-cord.png?fit=640%2C371&ssl=1" alt="Omurilik Görseli">
+
+            <h2>Çevresel Sinir Sistemi (ÇSS)</h2>
+            <p>
+                Çevresel sinir sistemi (ÇSS), vücudu merkezi sinir sistemine bağlayan sinir ağıdır. 
+                MSS'ye bilgi taşır ve emirleri iletir. ÇSS iki ana bölüme ayrılır:
+            </p>
+            <ul>
+                <li><strong>Somatik Sinir Sistemi:</strong> Kas hareketlerini kontrol eder. Örneğin, koşma ve yazı yazma.</li>
+                <li><strong>Otonom Sinir Sistemi:</strong> İstem dışı işlevleri kontrol eder. Örneğin, kalp atışı ve sindirim.</li>
+            </ul>
+            <img src="https://bilimgenc.tubitak.gov.tr/sites/default/files/inline-images/cizim_1%20kopyas%C4%B1.png" alt="Çevresel Sinir Sistemi Görseli">
+
+            <h3>Otonom Sinir Sistemi</h3>
+            <p>
+                Otonom sinir sistemi, vücudun otomatik fonksiyonlarını kontrol eder. Üç alt bölümü vardır:
+                <ul>
+                    <li><strong>Sempatik Sinir Sistemi:</strong> Stres sırasında vücudu hazırlar. Örneğin, kalp atışını hızlandırır.</li>
+                    <li><strong>Parasempatik Sinir Sistemi:</strong> Dinlenme sırasında vücudu normale döndürür. Örneğin, sindirimi hızlandırır.</li>
+                </ul>
+            </p>
+            <img src="https://www.biyolojihikayesi.com/img/konular/insandaSinirSistemi_11.Sinif.png" alt="Otonom Sinir Sistemi Görseli">
+
+            <button id="startQuiz">Bilgileri Test Et!</button>
+        </section>
+        
+        <section id="quiz" style="display: none;">
+            <h2>Test Soruları</h2>
+            <form id="quizForm">
+                <!-- Merkezi Sinir Sistemi Soruları -->
+                <div class="question">
+                    <p>1. Merkezi sinir sistemi hangi iki ana bölümden oluşur?</p>
+                    <input type="radio" name="q1" value="correct"> Beyin ve Omurilik<br>
+                    <input type="radio" name="q1" value="wrong"> Kalp ve Akciğer<br>
+                    <input type="radio" name="q1" value="wrong"> Kaslar ve Kemikler<br>
+                </div>
+                <div class="question">
+                    <p>2. Reflekslerin kontrolü hangi organ tarafından yapılır?</p>
+                    <input type="radio" name="q2" value="wrong"> Beyin<br>
+                    <input type="radio" name="q2" value="correct"> Omurilik<br>
+                    <input type="radio" name="q2" value="wrong"> Karaciğer<br>
+                </div>
+                <div class="question">
+                    <p>3. Görme hangi beyin bölgesinde işlenir?</p>
+                    <input type="radio" name="q3" value="wrong"> Temporal lob<br>
+                    <input type="radio" name="q3" value="correct"> Oksipital lob<br>
+                    <input type="radio" name="q3" value="wrong"> Frontal lob<br>
+                </div>
+                <div class="question">
+                    <p>4. Otonom sinir sistemi kaç alt bölüme ayrılır?</p>
+                    <input type="radio" name="q4" value="wrong"> 3<br>
+                    <input type="radio" name="q4" value="correct"> 2<br>
+                    <input type="radio" name="q4" value="wrong"> 4<br>
+                </div>
+
+                <!-- Çevresel Sinir Sistemi Soruları -->
+                <div class="question">
+                    <p>5. Çevresel sinir sistemi hangi iki bölüme ayrılır?</p>
+                    <input type="radio" name="q5" value="correct"> Somatik ve Otonom<br>
+                    <input type="radio" name="q5" value="wrong"> Merkezi ve Somatik<br>
+                    <input type="radio" name="q5" value="wrong"> Parasempatik ve Sempatik<br>
+                </div>
+                <div class="question">
+                    <p>6. Stres sırasında hangi sistem devreye girer?</p>
+                    <input type="radio" name="q6" value="correct"> Sempatik Sinir Sistemi<br>
+                    <input type="radio" name="q6" value="wrong"> Parasempatik Sinir Sistemi<br>
+                    <input type="radio" name="q6" value="wrong"> Somatik Sinir Sistemi<br>
+                </div>
+                <div class="question">
+                    <p>7. Hangisi hipotalamusun görevidir?</p>
+                    <input type="radio" name="q7" value="wrong"> Dışarıdan gelen uyarıyı algılamak<br>
+                    <input type="radio" name="q7" value="correct"> Homeostasiyi sağlamak<br>
+                    <input type="radio" name="q7" value="wrong"> Duyu organlarından gelen impulsları dağıtmak<br>
+                </div>
+                <div class="question">
+                    <p>8. Parasempatik sinir sistemi hangi işlevi yapar?</p>
+                    <input type="radio" name="q8" value="correct"> Rahatlama sırasında vücudu normale döndürür<br>
+                    <input type="radio" name="q8" value="wrong"> Kasları güçlendirir<br>
+                    <input type="radio" name="q8" value="wrong"> Stres tetikler<br>
+                </div>
+                <div class="question">
+                    <p>9. İstemli hareketleri hangi sistem kontrol eder?</p>
+                    <input type="radio" name="q9" value="correct"> Somatik Sinir Sistemi<br>
+                    <input type="radio" name="q9" value="wrong"> Otonom Sinir Sistemi<br>
+                    <input type="radio" name="q9" value="wrong"> Merkezi Sinir Sistemi<br>
+                </div>
+                <div class="question">
+                    <p>10. Görme refleksini merkezi sinir sistemindeki hangi organ kontrol eder?</p>
+                    <input type="radio" name="q10" value="correct"> Orta Beyin<br>
+                    <input type="radio" name="q10" value="wrong"> Omurilik<br>
+                    <input type="radio" name="q10" value="wrong"> Beyincik<br>
+                </div>
+                <button type="button" id="submitQuiz">Sonuçları Göster</button>
+            </form>
+        </section>
+        
+        <section id="result" style="display: none;">
+            <h2>Sonuçlar</h2>
+            <p id="resultMessage"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<script> /*javascript*/
+    document.getElementById('startQuiz').addEventListener('click', function () {
+    document.getElementById('bilgi').style.display = 'none';
+    document.getElementById('quiz').style.display = 'block';
+});
+
+document.getElementById('submitQuiz').addEventListener('click', function () {
+    const answers = document.querySelectorAll('input[type="radio"]:checked');
+    const totalQuestions = 10;
+    let correctAnswers = 0;
+
+    answers.forEach(answer => {
+        if (answer.value === 'correct') {
+            correctAnswers++;
+        }
+    });
+
+    document.getElementById('quiz').style.display = 'none';
+    document.getElementById('result').style.display = 'block';
+
+    const resultMessage = document.getElementById('resultMessage');
+    if (correctAnswers === totalQuestions) {
+        resultMessage.innerText = 'Tebrikler! Tüm soruları doğru cevapladınız 🎉';
+    } else {
+        resultMessage.innerText = `Doğru cevaplar: ${correctAnswers}/${totalQuestions}. Daha fazla çalışmalısınız!`;
+    }
+});
+</script>
